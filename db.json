@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "name": "Rohit",
+      "email": "Rohit@gmail.com",
+      "phone": "9346667405",
+      "city": "Hyderabad",
+      "id": 1
+    },
+    {
+      "name": "Sai",
+      "email": "sai@gmail.com",
+      "phone": "9346367450",
+      "city": "Bangalore",
+      "id": 2
+    },
+    {
+      "name": "Aryan",
+      "email": "Aryan@gmail.com",
+      "phone": "8946577231",
+      "city": "Delhi",
+      "id": 3
+    },
+    {
+      "name": "Rajesh",
+      "email": "Rajesh@gmail.com",
+      "phone": "8886767639",
+      "city": "vizag",
+      "id": 4
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": "6946577231",
+      "city": "vizag",
+      "id": 5
+    },
+    {
+      "name": "Rahul",
+      "email": "Rahul@gmail.com",
+      "phone": "8546577231",
+      "city": "Mumbai",
+      "id": 6
+    },
+    {
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "phone": "9346647450",
+      "city": "Chennai",
+      "id": 7
+    },
+    {
+      "name": "Teja",
+      "email": "Teja@gmail.com",
+      "phone": "8346667450",
+      "city": "vizag",
+      "id": 8
+    },
+    {
+      "name": "rushi",
+      "email": "rushirushi077@gmail.com",
+      "phone": "9346667450",
+      "city": "Hyderabad",
+      "id": 9
+    },
+    {
+      "name": "raghav",
+      "email": "Raghav@gmail.com",
+      "phone": "8446217450",
+      "city": "Rajahmundry",
+      "id": 10
+    },
+    {
+      "name": "ram",
+      "email": "ram01@gmail.com",
+      "phone": "9348457454",
+      "city": "Hyderabad",
+      "id": 11
+    },
+    {
+      "name": "vinay",
+      "email": "vinay@gmail.com",
+      "phone": "8345477132",
+      "city": "Hyderabad",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+header {
+    background-color: #34568B;
+    padding: 20px;
+}
+
+h2 {
+    color: #fff;
+}
+
+.search {
+    margin-bottom: 20px;
+    margin-left: 90px;
+    width: 180px;
+}
+
+.mob-table {
+
+    width: 100%;
+    padding: 20px 25px;
+    background-color: white;
+    margin: 30px 0;
+    border-radius: 3px;
+}
+
+.headers {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    color: white;
+}
+
+th {
+
+    text-align: center;
+
+}
+
+.container{
+    margin-top: -10px;
+}
+.add {
+
+    background-color: #5cb85c;
+    padding: 10px;
+    color: white;
+
+}
+
+.form-wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   margin-top: 30px;
+
+}
+
+h4{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #6B5B95;
+    text-decoration:underline;
+}
+.mobileForm {
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 20px 20px 50px 15px rgb(55, 54, 54);
+}
+
+.form-group {
+    margin-top: 35px;
+    width: 350px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 20px;
+
+}
+
+
+.group {
+
+    display: flex;
+    margin: 15px 0;
+}
+
+
+.group label {
+    width: 70px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.action {
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px;
+}
+
+.validationText {
+    color: red;
+}
+
+input.ng-dirty.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+/* it checks validations based on  the given conditions */
+input.ng-dirty.ng-touched.ng-valid {
+    border: 2px solid green;
+}
+
+.row1 {
+    box-shadow: 5px 5px 20px 5px rgb(49, 36, 36);
+}
+
+.pagination {
+    margin-left: 33%;
+}
+
+.adduser {
+    float: right;
+    padding: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+
+
+}
+
+.adduser:hover {
+    background-color: #009B77;
+    color: aliceblue;
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.search>i {
+    margin-left: 210px;
+}
+
+
+
+/* Bootstrap 4 text input with search icon */
+
+.search-label .form-control {
+    padding-left: 40px;
+    margin-left: 80px;
+    width: 180px;
+    margin-top: -40px;
+}
+
+.search-label .form-icon {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    color: #aaa;
+    pointer-events: none;
+    margin-left: 50px;
+}
+.edit{
+    margin-right: 20px;
+}
+#cancle-button {
+    margin-left: 3px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(228, 68, 68);
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+}
+
+#submit-button {
+    margin-left: 3px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+/* form input */
+.form-input {
+    width: 340px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #edeef0;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+/* form label */
+.form-label {
+    position: absolute;
+
+    color: #6B5B95;
+
+}
+
+/*  label placeholder */
+.form-input:focus~.form-label,
+.form-input:not(:placeholder-shown),
+.form-input:not(:focus)~.form-label {
+
+    top: -0.5rem;
+    left: 0.8rem;
+    background-color: white;
+
+}

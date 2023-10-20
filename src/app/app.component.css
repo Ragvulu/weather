@@ -1,0 +1,39 @@
+.navbar{
+    background-color: #98B4D4;
+}
+
+.container {
+
+    width: 340px;
+    border: 8px solid #34568B;
+    border-radius: 3px;
+    margin-top: 30px;
+    text-align: start;
+    background-color: #34568B;
+
+}
+
+span {
+
+    margin: 20px;
+    background-color: #98B4D4;
+    white-space: nowrap;
+
+}
+
+a {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration:none;
+
+}
+
+
+
+.active {
+    background-color: #55B4B0;
+    padding: 8px;
+    border-radius: 3px;
+}

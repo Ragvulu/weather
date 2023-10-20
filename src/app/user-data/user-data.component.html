@@ -1,0 +1,143 @@
+<div  class="container">
+
+    <div class="headers mob-table">
+
+        <h2 class="table-title">manage mobiles</h2>
+        <button class="add">Add mobile</button>
+    </div>
+<!--
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">mobiles</th>
+                <th scope="col">price</th>
+                <th scope="col">Ram</th>
+                <th scope="col">stroage</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+
+
+
+
+        <tbody class="text-center">
+
+            <tr *ngFor="let mobile of mobiles">
+
+                <td scope="col">{{mobile['name']}}</td>
+
+                <td scope="col">{{mobile['price']}}</td>
+                <td scope="col">{{mobile['ram1']}}</td>
+                <td scope="col">{{mobile['storage']}}</td>
+                <td scope="col"><button class="btn btn-success" (click)="openForm(mobile)">Edit</button></td>
+                <td class="edit"><button class="btn btn-danger" (click)="deleteMobile(mobile['id'])">Delete</button>
+                </td>
+
+
+
+
+
+
+
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+-->
+
+
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">mobiles</th>
+            <th scope="col">price</th>
+            <th scope="col">Ram</th>
+            <th scope="col">stroage</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    
+    <tbody class="text-center">
+
+        <tr *ngFor="let item of users;i:index">
+            <td scope="col">{{item.id}}</td>
+
+            <td scope="col">{{item.firstname}}</td>
+            <td scope="col">1999</td>
+            <td scope="col">6gb</td>
+            <td scope="col">128gb</td>
+            <td scope="col"><button class="btn btn-success" (click)="getuserByID(item.id)">Edit</button></td>
+            <td class="edit"><button class="btn btn-danger" (click)="deleteuserbyid(item.id)">Delete</button>
+            </td>
+
+
+
+
+
+
+
+
+
+        </tr>
+
+
+    </tbody>
+</table>
+</div>
+
+<div class="form-wrapper" *ngIf="showForm" (ngSubmit)="submitForm()">
+
+    <div class="mobileForm">
+
+        <h2 class="text-info text-center"></h2>
+       
+
+        <form action="" [formGroup]="ref">
+            <h4>Create Account</h4> <p class="header">(Reactive)</p>
+            <div>
+        
+              <label>Your name</label>
+              <input type="text" class="form-control" formControlName="firstname" placeholder="First and last name">
+        
+              <p class="validationText" *ngIf="ref.get('firstname')?.touched&&ref.get('firstname')?.hasError('required')">
+                🛈Enter your name
+              </p>
+              <p class="validationText" *ngIf="ref.get('firstname')?.touched&&ref.get('firstname')?.hasError('minlength')">
+                🛈Name must be
+                at more than 2 characters,</p>
+              <p class="validationText" *ngIf="ref.get('firstname')?.dirty&&ref.get('firstname')?.hasError('nameCheck')">
+                🛈 Please Enter only alphabets </p>
+        
+       
+              </div>
+              </form>
+       
+
+
+
+        <div class="action">
+            <div class="action">
+
+                <button class="btn btn-success save" (click)="submitForm()">save</button>
+                <button class="btn btn-danger cancel" (click)="closeForm()">cancel</button>
+    
+            </div>
+    
+            
+
+        </div>
+
+    </div>
+
+</div>
+-->

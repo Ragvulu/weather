@@ -1,0 +1,131 @@
+<!--Header part -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>USER DATA</h2>
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-light" class="adduser" (click)="addmodel()">Add New User</button>
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<!--search record -->
+
+
+<div class="form-group search-label">
+    <span class="fa fa-search form-icon"></span>
+    <input type="text" [(ngModel)]="userSearch" class="form-control" placeholder="Name,Email,Phone,city">
+</div>
+
+<!--User data-->
+<div class="container">
+    <div class="row1">
+        <div class="col-sm-12">
+            <!--user data in table format-->
+            <table>
+                <!--Table column-->
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+                <!--Table rows-->
+
+                <tr
+                    *ngFor="let user of data |customFilterPipe: userSearch| paginate: { itemsPerPage: 5, currentPage: p } let i = index;">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.city}}</td>
+                    <td>
+                        <button class="btn btn-primary edit" (click)="edit(i, user)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-danger" (click)="delete(i, user)"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!--pagination for  user records -->
+            <div class="pagination">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--User form-->
+<div class="form-wrapper" *ngIf="showForm">
+    <div class="mobileForm">
+        <form [formGroup]="userform" (ngSubmit)="isedit ? update(userform) : sendata(userform)">
+            <h4>{{formstatus}}</h4>
+            <!--user Name field -->
+            <div class="form-group">
+                <input type="text" class="form-group" id="name" formControlName="name" class="form-input" required>
+                <label for="name" class="form-label"> Name:</label>
+                <p class="validationText" *ngIf="submitted1 && userform.get('name')">🛈 Name required</p>
+                <p class="validationText"
+                    *ngIf="userform.get('name')?.touched&&userform.get('name')?.hasError('required')">
+                    🛈Enter your name</p>
+                <p class="validationText"
+                    *ngIf="userform.get('name')?.touched&&userform.get('name')?.hasError('minlength')">
+                    🛈Name must be at more than 2 characters,</p>
+                <p class="validationText"
+                    *ngIf="userform.get('name')?.dirty&&userform.get('name')?.hasError('nameCheck')">
+                    🛈 Please Enter only alphabets </p>
+            </div>
+
+            <!--user phone number field -->
+            <div class="form-group">
+                <input type="text" id="phone" formControlName="phone" class="form-input" required>
+                <label for="phone" class="form-label"> Phone:</label>
+                <p class="validationText" *ngIf="submitted1 && userform.get('phone')">🛈 phone number required</p>
+                <div *ngIf="userform.get('phone')?.touched">
+                    <p class="validationText" *ngIf="userform.get('phone')?.hasError('required')"></p>
+                    <p class="validationText" *ngIf="userform.get('phone')?.hasError('maxlength')"> 🛈Please, Enter
+                        valid 10 digit Mobile Number</p>
+                    <p class="validationText" *ngIf="userform.get('phone')?.hasError('mobileNumberCheck')">
+                        🛈Please, Enter valid 10 digit Mobile Number</p>
+                </div>
+            </div>
+
+            <!--user email field -->
+            <div class="form-group">
+                <input type="email" id="email" formControlName="email" class="form-input" required>
+                <label for="email" class="form-label"> Email:</label>
+                <p class="validationText" *ngIf="submitted1 && userform.get('email')">🛈 email required</p>
+                <p class="validationText"
+                    *ngIf="userform.get('email')?.touched&& userform.get('email')?.hasError('required')"></p>
+                <p class="validationText"
+                    *ngIf="userform.get('email')?.touched && userform.get('email')?.hasError('emailCheck')">🛈 Enter
+                    a valid email address</p>
+            </div>
+
+            <!--user city field -->
+            <div class="form-group">
+                <input type="text" id="city" formControlName="city" class="form-input" required>
+                <label for="city" class="form-label">City:</label>
+                <p class="validationText" *ngIf="submitted1 && userform.get('city')">🛈 city required</p>
+                <p class="validationText"
+                    *ngIf="userform.get('city')?.touched&&userform.get('city')?.hasError('required')">
+                    🛈Enter your city </p>
+                <p class="validationText"
+                    *ngIf="userform.get('city')?.touched&&userform.get('city')?.hasError('minlength')">
+                    ciyt must be at more than 2 characters,</p>
+                <p class="validationText"
+                    *ngIf="userform.get('city')?.dirty&&userform.get('city')?.hasError('nameCheck')">
+                    🛈 Please Enter only alphabets </p>
+            </div>
+
+            <!--buttons submit/cancle-->
+            <button type="submit" id="submit-button">{{text}}</button>
+            <button id="cancle-button" (click)="cancle()">Cancel</button>
+
+        </form>
+    </div>
+</div>
